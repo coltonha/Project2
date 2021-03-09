@@ -39,7 +39,7 @@ public class LinkedString {
             length++;
         }
     }
-    
+
     public void add(char newItem) {
         if(isEmpty()){
             Node newNode= new Node();
@@ -56,12 +56,11 @@ public class LinkedString {
             curr.setNext(newNode);
         }
     }
-    
+    public int length(){
+        return length;
+    }
     public boolean isEmpty(){
-        if(head==null){
-            return true;
-        }
-        return false;
+        return length()==0;
     }
     
     @Override
