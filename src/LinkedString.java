@@ -63,8 +63,7 @@ public class LinkedString {
         return length()==0;
     }
     
-    @Override
-    public String toString() {
+    @Override public String toString() {
         String list =" ";
         Node curr=head;
         while (curr!=null){

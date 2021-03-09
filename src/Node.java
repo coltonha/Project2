@@ -13,7 +13,7 @@ public class Node {
         setNext(newNext);
     }
 
-    public int getItem() {
+    public char getItem() {
         return item;
     }
     public Node getNext() {
