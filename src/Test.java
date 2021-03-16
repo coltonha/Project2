@@ -4,6 +4,8 @@ public class Test {
         String string="Hello";
         LinkedString list1 = new LinkedString(chars);
         LinkedString list2= new LinkedString(string);
+        list2.replace('l','p');
+        list1.concat("mynameisSungwoongHa");
         System.out.println(list1.toString());
         System.out.println(list2.toString());
     }

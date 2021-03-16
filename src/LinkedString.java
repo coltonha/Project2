@@ -39,22 +39,48 @@ public class LinkedString {
             length++;
         }
     }
-
-    public void add(char newItem) {
-        if(isEmpty()){
-            Node newNode= new Node();
-            newNode.setItem(newItem);
-            head=newNode;
-            length++;
+    public char charAt(int index){
+        Node curr = head;
+        for(int nodeIndex = 0; nodeIndex < length; nodeIndex++){
+            if(nodeIndex != index) {
+                curr = curr.getNext();
+            }
+            else{
+                break;
+            }
+        }
+        return curr.getItem();    
+    }
+    public LinkedString concat(LinkedString str){
+        if(str.head == null){
+            return this;
+        }
+        else if(head == null){
+            length = str.length();
+            return str;
         }
         else{
-            Node curr=head;
-            Node newNode=new Node(newItem);
-            while(curr.getNext()!= null){
+            Node curr = head;
+        while(curr.getNext() != null){
+            curr = curr.getNext();
+        }
+            curr.setNext(str.head);
+            length += str.length();
+            return this;
+        }
+    }
+    public LinkedString replace(char oldChar, char newChar){
+        Node curr = head;
+        for(int nodeIndex = 0; nodeIndex < length; nodeIndex++){
+            if(curr.getItem()==oldChar) {
+                curr.setItem(newChar);
+                curr = curr.getNext();
+            }
+            else{
                 curr=curr.getNext();
             }
-            curr.setNext(newNode);
         }
+        return this;
     }
     public int length(){
         return length;
