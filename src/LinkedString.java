@@ -1,3 +1,11 @@
+ /*
+ * Project #2
+ * Source Code File: LinkedString.java
+ * Programmer: Sungwoong Ha
+ * Due: 3/23/21
+ * Description: This is a Java implementation of an ADT 
+ * which defines a LinkedString.
+ */
 public class LinkedString {
     private Node head;
     private int length;

@@ -1,3 +1,11 @@
+ /*
+ * Project #2
+ * Source Code File: Node.java
+ * Programmer: Sungwoong Ha
+ * Due: 3/23/21
+ * Description: This is a Java implementation of an ADT 
+ * which defines a Node.
+ */
 public class Node {
     private char item;
     private Node next;
